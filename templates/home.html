@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Likes-App</title>
+</head>
+<body>
+    <div class=" posts">
+    {% for post in all %}
+        {{ forloop.counter }} ){{post.title}}<br>
+        {{post.description}}<br>
+        <br><a href="{% url "likes" id=post.id %}">Like</a><br>
+        Total-likes:<b></b><br><hr>
+    {% endfor %}
+    {{likes}}
+    </div>
+</body>
+</html>
